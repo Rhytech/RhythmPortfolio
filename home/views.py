@@ -10,7 +10,7 @@ from django.conf import settings
 
 # Create your views here.
 def index(request):
-    return render(request,'index.html',context)
+    return render(request,'index.html')
 
 @login_required(login_url='/login')
 def about(request):
