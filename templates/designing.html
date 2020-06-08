@@ -1,0 +1,417 @@
+{% extends 'base.html' %}
+{% block title %}
+Designing
+{% endblock title %}
+{% block dr  %}
+active
+{% endblock dr  %}
+{% block des  %}
+active
+{% endblock des  %}
+{% block body %}
+<style type="text/css">
+    @import url('https://themes.googleusercontent.com/fonts/css?kit=Nb5s6DQ5nFDvuqQdrcz0eTvDJv_xEUHVzWCb0ZQDJQQ');
+
+    ol {
+        margin: 0;
+        padding: 0
+    }
+
+    table td,
+    table th {
+        padding: 0
+    }
+
+    .c8 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        orphans: 2;
+        widows: 2;
+        text-align: justify;
+        height: 11pt
+    }
+
+    .c0 {
+        color: #ff0000;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 18pt;
+        font-family: "Caveat";
+        font-style: normal
+    }
+
+    .c4 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.5;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        height: 11pt
+    }
+
+    .c2 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.5;
+        orphans: 2;
+        widows: 2;
+        text-align: justify;
+        height: 11pt
+    }
+
+    .c16 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        height: 11pt
+    }
+
+    .c6 {
+        color: #000000;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 11pt;
+        font-family: "Arial";
+        font-style: normal
+    }
+
+    .c10 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.5;
+        orphans: 2;
+        widows: 2;
+        text-align: justify
+    }
+
+    .c14 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        orphans: 2;
+        widows: 2;
+        text-align: justify
+    }
+
+    .c5 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.5;
+        orphans: 2;
+        widows: 2;
+        text-align: center
+    }
+
+    .c1 {
+        font-size: 36pt;
+        font-family: "Caveat";
+        color: #cc0000;
+        font-weight: 400
+    }
+
+    .c23 {
+        color: #073763;
+        font-weight: 500;
+        font-size: 16pt;
+        font-family: "Roboto"
+    }
+
+    .c15 {
+        color: #cc0000;
+        font-weight: 500;
+        font-size: 24pt;
+        font-family: "Roboto"
+    }
+
+    .c17 {
+        color: #cc0000;
+        font-weight: 500;
+        font-size: 36pt;
+        font-family: "Roboto"
+    }
+
+    .c19 {
+        color: #ff0000;
+        font-weight: 400;
+        font-size: 14pt;
+        font-family: "Caveat"
+    }
+
+    .c3 {
+        font-size: 18pt;
+        font-family: "Caveat";
+        color: #073763;
+        font-weight: 400
+    }
+
+    .c18 {
+        color: #000000;
+        font-weight: 400;
+        font-size: 11pt;
+        font-family: "Caveat"
+    }
+
+    .c21 {
+        color: #000000;
+        font-weight: 400;
+        font-size: 12pt;
+        font-family: "Caveat"
+    }
+
+    .c13 {
+        font-size: 18pt;
+        font-family: "Caveat";
+        color: #ff0000;
+        font-weight: 400
+    }
+
+    .c12 {
+        -webkit-text-decoration-skip: none;
+        text-decoration: underline;
+        text-decoration-skip-ink: none
+    }
+
+    .c9 {
+        background-color: #ffffff;
+        max-width: 451.4pt;
+        padding: 72pt 72pt 72pt 72pt
+    }
+
+    .c7 {
+        text-decoration: none;
+        vertical-align: baseline;
+        font-style: normal
+    }
+
+    .c22 {
+        color: inherit;
+        text-decoration: inherit
+    }
+
+    .c11 {
+        text-indent: 36pt
+    }
+
+    .c20 {
+        background-color: #ffffff
+    }
+
+    .title {
+        padding-top: 0pt;
+        color: #000000;
+        font-size: 26pt;
+        padding-bottom: 3pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    .subtitle {
+        padding-top: 0pt;
+        color: #666666;
+        font-size: 15pt;
+        padding-bottom: 16pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    li {
+        color: #000000;
+        font-size: 11pt;
+        font-family: "Arial"
+    }
+
+    p {
+        margin: 0;
+        color: #000000;
+        font-size: 11pt;
+        font-family: "Arial"
+    }
+
+    h1 {
+        padding-top: 20pt;
+        color: #000000;
+        font-size: 20pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h2 {
+        padding-top: 18pt;
+        color: #000000;
+        font-size: 16pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h3 {
+        padding-top: 16pt;
+        color: #434343;
+        font-size: 14pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h4 {
+        padding-top: 14pt;
+        color: #666666;
+        font-size: 12pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h5 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h6 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        font-style: italic;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+</style>
+{% if messages %}
+<div class="messages container mt-0 alert alert-success alert-dismissible fade show" role="alert">
+    {% for message in messages %}
+    <strong class="text-center">{{ message }}{{ user.username }}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    {% endfor %}
+</div>
+{% endif %}
+<div style="margin:auto;padding:auto;max-width:100%" class="container">
+    <p class="c5"><span class="c1">Designing</span></p>
+    <p class="c4"><span class="c7 c21"></span></p>
+    <p class="c10"><span class="c3 c7">Designing is also a skill I learnt. I designed a logo for GPM Pest Management
+            formerly Grotec Pest Management, the Pest Control Company which operates in Punjab.</span></p>
+    <p class="c10"><span class="c3 c7">I have even designed a few posters for the Company.</span></p>
+    <p class="c10"><span class="c3 c7">I am well &nbsp;versed with adobe products and use them mostly for editing and
+            designing.Adobe Photoshop and Adobe Spark are the ones I use for designing.The logos have been designed
+            using Adobe Photoshop and the posters have been designed using Adobe Spark.</span></p>
+    <p class="c10"><span class="c3">Other than posters and </span><span class="c3">logo</span><span class="c3 c7">s, I
+            even tried my hand at Video Editing using Adobe Premiere and have created a lyrical video of a song which is
+            pretty average. &nbsp;</span></p>
+    <p class="c2"><span class="c0"></span></p>
+    <p class="c10"><span class="c0">Just take an overview of the creations:</span></p>
+    <p class="c2"><span class="c0"></span></p>
+    <p class="c10"><span class="c3">1. </span><span class="c3 c12">Pest Control Company Logos</span><span
+            class="c3 c7">&nbsp;:</span></p>
+    <p class="c10"><span class="c13">Have a look: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span
+            class="c13 c12">Designed using Adobe Photoshop</span><span class="c13">:</span></p>
+    <p class="c10"><span><iframe src="https://drive.google.com/file/d/153Csogv1PDg7otIp9NCuSnZBR5eElBOH/preview"
+                style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px"
+                marginwidth="0px" height="300px" width="300px" allowfullscreen></iframe></span></p>
+    <p class="c2"><span class="c0"></span></p>
+    <p class="c2"><span class="c0"></span></p>
+    <p class="c10"><span><iframe src="https://drive.google.com/file/d/11UJ_YRocQWlA-qsz71CNUIn0RguBImeC/preview"
+                style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px"
+                marginwidth="0px" height="300px" width="300px" allowfullscreen></iframe></span></p>
+    <p class="c2"><span class="c0"></span></p>
+    <p class="c10"><span class="c3">2. &nbsp;</span><span class="c3 c12">Posters</span><span
+            class="c3 c7">&nbsp;:</span></p>
+    <p class="c10"><span class="c13">Have a look at it. &nbsp; &nbsp; &nbsp;Designed using Adobe Spark</span></p>
+    <p class="c10"><span><iframe src="https://drive.google.com/file/d/1UtjP4OYj5u8bZeZCV_X8yAFR2imtYGtf/preview"
+                style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px"
+                marginwidth="0px" height="300px" width="300px" allowfullscreen></iframe></span></p>
+    <p class="c2"><span class="c0"></span></p>
+    <p class="c2"><span class="c0"></span></p>
+    <p class="c10"><span><iframe src="https://drive.google.com/file/d/1r-RW7su1USmptmxPCFj8DdwTTz0pxP-w/preview"
+                style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px"
+                marginwidth="0px" height="300px" width="300px" allowfullscreen></iframe></span></p>
+    <p class="c10"><span class="c0">And a few more !</span></p>
+    <p class="c2"><span class="c3 c7"></span></p>
+    <p class="c10"><span class="c3">3. </span><span class="c3 c12">Video Editing</span><span class="c3 c7">:</span></p>
+    <p class="c2"><span class="c3 c7"></span></p>
+    <p class="c10"><span class="c3 c7">I created a lyrical video of a song.Although quite average, I would love to share
+            it here.</span></p>
+    <p class="c10"><span class="c3 c7">&nbsp; </span></p>
+    <p class="c10"><span><iframe src="https://drive.google.com/file/d/1QiHXEDFJNtadKnIy2LLhHY2kLw7-iDl2/preview"
+                style="border:0px #ffffff none;" width="400" height="250" frameborder="1"
+                allowfullscreen></iframe></span></p>
+    <p class="c2"><span class="c0"></span></p>
+    <p class="c2"><span class="c0"></span></p>
+    <p class="c10"><span class="c0"></span></p>
+    <p class="c2"><span class="c0"></span></p>
+
+    <p class="c14"><span class="c0">Keep in touch for more updates!</span></p>
+    <p class="c8"><span class="c0"></span></p>
+    <p class="c10"><span class="c3">You can contact me at </span><span class="c13 c12"><a class="c22"
+                href="mailto:rhytech2020@gmail.com">rhytech2020@gmail.com</a></span><span class="c13">.</span></p>
+    <p class="c10 c11"><span class="c7 c19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+    <p class="c14"><span class="c3 c7">- &nbsp;Rhytech</span></p>
+    <p class="c14"><span class="c3">&nbsp; &nbsp;</span><span class="c13">Keeping Name Anonymous For No
+            Reason</span><span class="c3 c7">&nbsp;&#x1f601;</span></p>
+    <p class="c8"><span class="c3 c7"></span></p>
+    <p class="c8"><span class="c3 c7"></span></p>
+    <p class="c10"><span class="c3 c7">&nbsp;</span></p>
+    <p class="c2"><span class="c3 c7"></span></p>
+    <p class="c2"><span class="c3 c7"></span></p>
+    <p class="c4"><span class="c7 c18"></span></p>
+    <p class="c8"><span class="c7 c17"></span></p>
+    <p class="c16"><span class="c6"></span></p>
+    <p class="c8"><span class="c7 c15"></span></p>
+    <p class="c8"><span class="c7 c23"></span></p>
+    <p class="c16"><span class="c6"></span></p>
+    <p class="c8"><span class="c15 c7"></span></p>
+    <p class="c16"><span class="c6"></span></p>
+
+
+</div>
+<!-- FOOTER -->
+<footer class="container mt-3">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>© 2017-2021 RHYTECH · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</footer>
+{% endblock body %}

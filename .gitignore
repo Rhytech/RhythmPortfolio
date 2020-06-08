@@ -1,0 +1,7 @@
+requirements.txt
+Procfile
+db.sqlite3
+static/admin
+models/migrations
+**/__pycache__
+project1/settings.py

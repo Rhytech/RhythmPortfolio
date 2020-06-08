@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}
+Login
+{% endblock title %}
+{% block body %}
+{% if messages %}
+    <div class="messages container mt-0 alert alert-danger alert-dismissible fade show" role="alert">
+        {% for message in messages %}
+        <strong class="text-center">{{ message }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div style="margin:auto;padding: 25px;font-size:15px;text-align:center;border:solid 1px green" class="container mt-2">
+        <p style="color:red"><u>Test_Username</u>:  test</p>
+        <p style="color:red"><u>Test_Password</u>:  testbeingtest</p>
+        <p>Enter Test Credentials below or SignUp to get your own login credentials for future.</p>
+        <p>Required Sign In !</p>
+        <form class="form-signin" method="POST" action="/login">
+            {% csrf_token %}
+            {% load static %}
+            <img class="mt-6" src={% static '/img/rhytech.png' %} alt="" width="72" height="72">
+            <h3 class="h3 mb-4 font-weight-normal">Rhytech</h3>
+            <p style="font-size:20px"class-="text-muted"><b>Sign In</b></p>
+            <!--In order to get value of next we do this-->
+            <input type="hidden" name="next" value="{{ request.GET.next }}" />
+
+            <label for="inputUsername" class="sr-only">Username</label>
+            <input style="width:50%;margin-left:25%" type="text" id="username" name="username" class="form-control" placeholder="Username" required
+                autofocus>
+
+            <!--
+                    <label for="inputEmail" class="sr-only">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" required
+                        autofocus>
+                    -->
+            <br>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input style="width:50%;margin-left : 25%" type="password" id="inputPassword" name="password" class="form-control" placeholder="Password"
+                required>
+            <br>    
+            <div class="checkbox mb-3">
+                <label>
+                    <a style="font-size:medium;color:black" href="reset/password_reset">Forgot Password ?</a>
+                </label>
+            </div>
+            <button style="width:50%;margin-left : 25%" class="btn btn-lg btn-success btn-block" type="submit">Sign In</button>
+        </form>
+    </div>
+    <!-- FOOTER -->
+<footer class="container mt-3">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>© 2017-2021 RHYTECH · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</footer>
+{% endblock body %}

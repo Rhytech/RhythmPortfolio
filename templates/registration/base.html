@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>{% block title %}{% endblock title %} | Rhytech</title>
+    {% load static %}
+    <link rel = "icon" href =  {% static '/img/rhytech.png' %} width="auto" height="auto" type = "image/x-icon"> 
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    {% load static %}
+  <a class="navbar-brand" href="/"><img src={% static '/img/rhytech.png' %} width="50" height="50" class="d-inline-block align-top" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item {% block ind  %}{% endblock ind  %}">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item {% block ab  %}{% endblock ab  %}">
+        <a class="nav-link" href="/about">About Me</a>
+      </li>
+      <li class="nav-item dropdown {% block dr  %}{% endblock dr  %}">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Projects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item {% block web  %}{% endblock web  %}" href="/websites">Websites</a>
+          <a class="dropdown-item {% block des  %}{% endblock des  %}" href="/designing">Designing</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item {% block art  %}{% endblock art  %}" href="/articles">Articles</a>
+        </div>
+      </li>
+      <li class="nav-item {% block co  %}{% endblock co  %}">
+        <a class="nav-link" href="/contact">Contact Me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin">Admin</a>
+      </li>
+    </ul>
+      {% if user.is_authenticated %}
+        <div>
+          <a style="color:yellow;margin-right:6px">Hello User, {{ user.username }} !</a>
+          <a  class="btn btn-danger" type="button" href ="/logout">Logout</a>
+        </div>
+    {% else %}
+      <!-- Do something which you want to do with unauthenticated user -->
+      <div>
+        <a  class="btn btn-success" type="button" href ="/login">Sign In</a>
+        <a class="btn btn-danger" type="button" href ="/signup">Sign Up</a>
+      </div>
+    {% endif %}
+  </div>
+</nav>
+{% block content %}
+{% endblock content %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

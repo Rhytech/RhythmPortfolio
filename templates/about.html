@@ -1,0 +1,315 @@
+{% extends 'base.html' %}
+{% block title %}
+About
+{% endblock title %}
+{% block ab  %}
+active
+{% endblock ab  %}
+{% block body %}
+<style type="text/css">
+    @import url('https://themes.googleusercontent.com/fonts/css?kit=aUqvjy8Cv2_gcanSUzZWfw');
+
+    ol {
+        margin: 0;
+        padding: 0
+    }
+
+    table td,
+    table th {
+        padding: 0
+    }
+
+    .c2 {
+        color: #000000;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 11pt;
+        font-family: "Caveat";
+        font-style: normal
+    }
+
+    .c9 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.5;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        height: 11pt
+    }
+
+    .c0 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.5;
+        orphans: 2;
+        widows: 2;
+        text-align: justify;
+        height: 11pt
+    }
+
+    .c1 {
+        color: #073763;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 18pt;
+        font-family: "Caveat";
+        font-style: normal
+    }
+
+    .c12 {
+        color: #000000;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 12pt;
+        font-family: "Caveat";
+        font-style: normal
+    }
+
+    .c6 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.5;
+        orphans: 2;
+        widows: 2;
+        text-align: center
+    }
+
+    .c8 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.5;
+        orphans: 2;
+        widows: 2;
+        text-align: justify
+    }
+
+    .c5 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    .c3 {
+        font-size: 18pt;
+        font-family: "Caveat";
+        color: #073763;
+        font-weight: 400
+    }
+
+    .c4 {
+        font-size: 36pt;
+        font-family: "Caveat";
+        color: #cc0000;
+        font-weight: 400
+    }
+
+    .c13 {
+        font-size: 18pt;
+        font-family: "Caveat";
+        color: #ff0000;
+        font-weight: 400
+    }
+
+    .c7 {
+        font-size: 16pt;
+        font-family: "Caveat";
+        color: #073763;
+        font-weight: 400
+    }
+
+    .c11 {
+        background-color: #ffffff;
+        padding: 72pt 72pt 72pt 72pt
+    }
+
+    .c10 {
+        height: 11pt
+    }
+
+    .title {
+        padding-top: 0pt;
+        color: #000000;
+        font-size: 26pt;
+        padding-bottom: 3pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    .subtitle {
+        padding-top: 0pt;
+        color: #666666;
+        font-size: 15pt;
+        padding-bottom: 16pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    li {
+        color: #000000;
+        font-size: 11pt;
+        font-family: "Arial"
+    }
+
+    p {
+        margin: 0;
+        color: #000000;
+        font-size: 11pt;
+        font-family: "Arial"
+    }
+
+    h1 {
+        padding-top: 20pt;
+        color: #000000;
+        font-size: 20pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h2 {
+        padding-top: 18pt;
+        color: #000000;
+        font-size: 16pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h3 {
+        padding-top: 16pt;
+        color: #434343;
+        font-size: 14pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h4 {
+        padding-top: 14pt;
+        color: #666666;
+        font-size: 12pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h5 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h6 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        font-style: italic;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+</style>
+{% if messages %}
+<div class="messages container mt-0 alert alert-success alert-dismissible fade show" role="alert">
+    {% for message in messages %}
+    <strong class="text-center">{{ message }}{{ user.username }}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    {% endfor %}
+</div>
+{% endif %}
+<div style="margin:auto;padding:auto;max-width:100%" class="container">
+    <p class="c6"><span class="c4">About Me</span></p>
+    <p class="c6 c10"><span class="c12"></span></p>
+    <p class="c8"><span class="c7">&nbsp;</span><span class="c1">I am currently pursuing B.E Computer Engineering at
+            Thapar Institute of Engineering and Technology, Patiala. Currently I am in 3rd year of the course and doing
+            specialization in Information and Cyber Security.</span></p>
+    <p class="c0"><span class="c1"></span></p>
+    <p class="c8"><span class="c1">Having gained technical skills over this period, I am seeking for internships and
+            pre-placement offers currently.</span></p>
+    <p class="c0"><span class="c1"></span></p>
+    <p class="c8"><span class="c1">Full Stack Web Development is the one skill I enjoyed gaining throughout the
+            course.</span></p>
+    <p class="c0"><span class="c1"></span></p>
+    <p class="c8"><span class="c1">Python and C++ are the object-oriented languages I am good at. I am a hackerank coder
+            and I have gained a silver level &nbsp;problem solving badge.</span></p>
+    <p class="c0"><span class="c1"></span></p>
+    <p class="c8"><span class="c1">I have a pretty good knowledge of Database Management Systems and Operating Systems
+            too.</span></p>
+    <p class="c0"><span class="c1"></span></p>
+    <p class="c8"><span class="c1">I &nbsp;have a pretty good knowledge of Corporate Finance. I chose the subject as a
+            generic elective during the course period. </span></p>
+    <p class="c0"><span class="c1"></span></p>
+    <p class="c8"><span class="c1">I am well versed with Adobe Products like Adobe Photoshop, Adobe Spark and Adobe
+            Premiere.</span></p>
+    <p class="c0"><span class="c1"></span></p>
+    <p class="c8"><span class="c1">I love to binge watch tv shows and movies during my free time and yes of course
+            computer gaming too is a good option for me.</span></p>
+    <p class="c0"><span class="c1"></span></p>
+    <p class="c8"><span class="c1">I just want to say that I am jack of all trades and master of none.</span></p>
+    <p class="c5 c10"><span class="c1"></span></p>
+    <p class="c5"><span class="c1">- &nbsp;Rhytech</span></p>
+    <p class="c5"><span class="c3">&nbsp; &nbsp;</span><span class="c13">Keeping Name Anonymous For No
+            Reason</span><span class="c1">&nbsp;&#x1f601;</span></p>
+    <p class="c6"><span
+            class="c1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></p>
+    <p class="c8"><span
+            class="c1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </p>
+    <p class="c0"><span class="c1"></span></p>
+    <p class="c8"><span class="c1">&nbsp;</span></p>
+    <p class="c0"><span class="c1"></span></p>
+    <p class="c0"><span class="c1"></span></p>
+    <p class="c9"><span class="c2"></span></p>
+</div>
+
+<!-- FOOTER -->
+<footer class="container mt-3">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>© 2017-2021 RHYTECH · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</footer>
+{% endblock body %}

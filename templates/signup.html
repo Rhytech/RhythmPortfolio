@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+Signup
+{% endblock title %}
+{% block body %}
+    <div style="margin:auto;padding: 25px;font-size:15px;text-align:center;border:solid green 1px" class="container mt-2">
+        <form method="post">
+      {% csrf_token %}
+      {% load static %}
+            <img class="mt-6" src={% static '/img/rhytech.png' %} alt="" width="72" height="72">
+            <h3 class="h3 mb-4 font-weight-normal">Rhytech</h3>
+            <p style="font-size:20px"class-="text-muted"><b>Sign Up</b></p>
+      {% for field in form %}
+      <p style="
+            font-size: 20px;color:green">
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% for error in field.errors %}
+      <p style="color: red">{{ error }}</p>
+      {% endfor %}
+      </p>
+      {% endfor %}
+      <br>
+      <button style="margin-left:37%;width:25%" class="btn btn-danger btn-block" type="Submit">Sign Up</button>
+    </form>
+    </div>
+    <!-- FOOTER -->
+<footer class="container mt-3">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>© 2017-2021 RHYTECH · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</footer>
+{% endblock body %}

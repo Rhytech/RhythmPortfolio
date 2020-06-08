@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}
+Contact
+{% endblock title %}
+{% block co  %}
+active
+{% endblock co  %}
+{% block body %}
+
+{% if messages %}
+  {% for message in messages %}
+  <div class="container alert alert-{{ message.tags }} mb-0 alert-dismissible fade show" role="alert"><!--message.tags is either success or info or debug or warning or error-->
+  <strong>{{ message }}<b> You shall get a reply soon!</b></strong><!--message is the message itself sent as success request-->
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  </div>
+  {% endfor %}
+{% endif %}
+
+{% load static %}
+<div class='container mt-1'>
+  <h3 class='text-center'><u><b>CONTACT ME</b></u><a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank">  📧</a></h3>
+  <h4 class="my-3 lead text-muted text-center"><b>Email me at rhytech2020@gmail.com | </b><a href="https://api.whatsapp.com/send?phone=917973757472&text=Hello%20Rhytech,%20" target="_blank"><img src={% static '/img/whatsapp.png' %} height="32" width="32"></img></a></h4>
+  <h4 class="my-2 lead text-muted text-center"><b>OR</b></h4>
+  <h4 class="my-3 lead text-muted text-center"><b>Fill the form !</b></h4>
+</div>
+<div class='container my-3'>
+  <form method="POST" action="/contact">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="name"><b>Name</b></label>
+    <input type="name" class="form-control" name="name" id="name" placeholder="Enter Your Name">
+  </div>
+  <div class="form-group">
+    <label for="email"><b>Email address</b></label>
+    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email">
+  </div>
+  <div class="form-group">
+    <label for="desc"><b>Feedback/Description &#11088;</b></label>
+    <textarea class="form-control" name="desc" id="desc" rows="3"></textarea>
+  </div>
+  <button class="btn btn-danger my-2">Submit</button>
+</form>
+</div>
+
+<!-- FOOTER -->
+<footer class="container mt-3">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>© 2017-2021 RHYTECH · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+  </footer>
+{% endblock body %}
