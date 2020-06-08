@@ -10,12 +10,6 @@ from django.conf import settings
 
 # Create your views here.
 def index(request):
-    context = {
-        #variables nhin bhhejenge hmm models mein se data queries fetch krke bhejenge
-        "variable1":"Rhytech/Rhythm",
-        "variable2":"I am Rhythm"
-
-    }
     return render(request,'index.html',context)
 
 @login_required(login_url='/login')
